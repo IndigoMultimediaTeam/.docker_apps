@@ -2,6 +2,7 @@
 
 ## TODO
 - git submoduly:
+  - `git submodule add git@github.com:IndigoMultimediaTeam/docker_apps.git .docker_apps`
   - [`git submodule`](https://gist.github.com/jaandrle/b4836d72b63a3eefc6126d94c683e5b3)
   - [IndigoMultimediaTeam/lts-driven-git-submodules](https://github.com/IndigoMultimediaTeam/lts-driven-git-submodules)
 - docker/podman
