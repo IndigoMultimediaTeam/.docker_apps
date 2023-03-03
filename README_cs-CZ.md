@@ -10,11 +10,11 @@ Dle zvolených nástrojů [docker/podman](#pozadavky) a capacitor/cordova:
 
 ### První inicializace
 ```bash
-docker-compose build capacitor
-docker-compose build cordova
+docker-compose build capacitor --no-cache
+docker-compose build cordova --no-cache
 
-podman-compose build capacitor
-podman-compose build cordova
+podman-compose build capacitor --no-cache
+podman-compose build cordova --no-cache
 ```
 
 ### Vstup do kontejneru

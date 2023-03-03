@@ -11,11 +11,11 @@ According to the selected tools [docker/podman](#requirements) and capacitor/cor
 
 ### First initialization
 ```bash
-docker-compose build capacitor
-docker-compose build cordova
+docker-compose build capacitor --no-cache
+docker-compose build cordova --no-cache
 
-podman-compose build capacitor
-podman-compose build cordova
+podman-compose build capacitor --no-cache
+podman-compose build cordova --no-cache
 ```
 
 ### Entry into container
