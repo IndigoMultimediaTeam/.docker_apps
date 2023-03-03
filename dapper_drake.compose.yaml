@@ -1,0 +1,15 @@
+services:
+  capacitor:
+    build:
+      context: .
+      dockerfile: ./.docker_apps/dapper_drake.Dockerfile
+      args:
+        - VERSION_JAVA=11
+        - VERSION_NODEJS=18
+        - VERSION_ANDROID_BUILD_TOOLS=33.0.0
+        - VERSION_ANDROID_PLATFORMS=32
+    volumes:
+      - ./dist:/home/dist
+      - ./android:/home/android
+      - ./.docker_apps:/home/.docker_apps
+      - /dev/bus/usb:/dev/bus/usb
