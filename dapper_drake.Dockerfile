@@ -52,6 +52,7 @@ RUN apt autoremove -y \
     && apt clean -y \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/*
+RUN unset ANDROID_HOME
 ENV DEBIAN_FRONTEND=newt
 
 WORKDIR /home
@@ -60,6 +61,8 @@ WORKDIR /home
 RUN if [ "$VERSION_JAVA" -gt "10"]; then \
 	echo export ANDROID_SDK_ROOT=/opt/android-sdk > ./.env; \
 	echo export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 >> ./.env; \
+else \
+	echo export ANDROID_HOME=/opt/android-sdk > ./.env; \
 fi
 CMD source ./.env
 # cordova/capacitor

@@ -1,15 +1,14 @@
 [![LTS+sub-branches](https://img.shields.io/badge/submodule-LTS+sub--branches-informational?style=flat-square&logo=git)](https://github.com/IndigoMultimediaTeam/lts-driven-git-submodules)
-# Docker containers for cordova/capacitor application development
-[Czech version](./README_cs-CZ.md).
+# Docker kontejnery pro vývoj cordova/capacitor aplikací
 
-## Quick navigation
-- [I want to add to a new/existing app](#add-to-repository)
-- [What I need to use](#requirements)
+## Rychlá navigace
+- [Chci přidat do nové/existující appky](#přidání-do-repozitáře)
+- [Co potřebuji k používání](#pozadavky)
 
-## Usage
-According to the selected tools [docker/podman](#requirements) and capacitor/cordova:
+## Používání
+Dle zvolených nástrojů [docker/podman](#pozadavky) a capacitor/cordova:
 
-### First initialization
+### První inicializace
 ```bash
 docker-compose build capacitor --no-cache
 docker-compose build cordova --no-cache
@@ -18,7 +17,7 @@ podman-compose build capacitor --no-cache
 podman-compose build cordova --no-cache
 ```
 
-### Entry into container
+### Vstup do kontejneru
 ```bash
 docker-compose run --rm capacitor bash
 docker-compose run --rm cordova bash
@@ -26,37 +25,37 @@ docker-compose run --rm cordova bash
 podman-compose run --rm capacitor bash
 podman-compose run --rm cordova bash
 ```
-…inside the container:
+…uvnitř kontejneru:
 ```bash
 npx cap …
 npx cordova …
 ```
 
-## Add to repository
-It can be done using git submodules:
+## Přidání do repozitáře
+Přidat lze pomocí git submodulů:
 ```bash
 git submodule add git@github.com:IndigoMultimediaTeam/.docker_apps.git
 ```
-You can learn how to work with submodules from the documentation [Git - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) or
-using the [IndigoMultimediaTeam/lts-driven-git-submodules](https://github.com/IndigoMultimediaTeam/lts-driven-git-submodules) tutorial.
+Jak pracovat se submoduly lze nastudovat z dokumentace [Git - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) nebo
+pomocí výcucu [IndigoMultimediaTeam/lts-driven-git-submodules](https://github.com/IndigoMultimediaTeam/lts-driven-git-submodules).
 
-Then just select the desired `*.yml`:
+Poté již stačí jen zvolit požadovaný `*.yml`:
 ```bash
 cp ./.docker_apps/dapper_drake.compose.yaml ./compose.yaml
 ```
-...and modify it as required.
+…a případně jej upravit dle požadavků.
 
-## Requirements
-Containers are compatible with:
+## Požadavky
+Kontejnery jsou kompatibilní s:
 - [Docker: Accelerated, Containerized Application Development](https://www.docker.com/)
-- [Podman - What is Podman?](https://docs.podman.io/en/latest/)
+- [Podman — What is Podman?](https://docs.podman.io/en/latest/)
 
-...installation procedure, see:
+…postup instalace, viz:
 
 ## Docker
 - Ubuntu: `sudo apt install docker docker-compose`
 - Mac/Windows: [Docker Desktop](https://docs.docker.com/desktop/)
-- Mac/Widows alternatively (on your own):
+- Mac/Widows alternativně (na vlastní triko):
 	- `docker`:
 	- [How To Install Docker Without Docker Desktop On Windows | by Paul Knulst | Better Programming](https://betterprogramming.pub/how-to-install-docker-without-docker-desktop-on-windows-a2bbb65638a1)
 	- [Docker for Mac: Homebrew Step-by-Step Tutorial | Cprime](https://www.cprime.com/resources/blog/docker-for-mac-with-homebrew-a-step-by-step-tutorial/)
