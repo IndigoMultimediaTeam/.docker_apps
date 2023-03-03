@@ -38,7 +38,7 @@ It can be done using git submodules:
 git submodule add git@github.com:IndigoMultimediaTeam/.docker_apps.git
 ```
 You can learn how to work with submodules from the documentation [Git - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) or
-using the [IndigoMultimediaTeam/lts-driven-git-submodules](https://github.com/IndigoMultimediaTeam/lts-driven-git-submodules) tutorial.
+using the [`git submodule`](https://gist.github.com/jaandrle/b4836d72b63a3eefc6126d94c683e5b3) tutorial.
 
 Then just select the desired `*.yml`:
 ```bash
